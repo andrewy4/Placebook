@@ -6,16 +6,18 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:nestedScrollingEnabled="true">
+    android:nestedScrollingEnabled="true"
+    android:id="@+id/enter_place"
+    android:longClickable="false">
 
 
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Place"
+        android:text="Place:"
         android:id="@+id/Place"
             android:textColor="#ff000000"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:textIsSelectable="false"
         android:visibility="visible"
         android:textStyle="bold"
@@ -32,9 +34,8 @@
         android:textStyle="bold"
         android:nestedScrollingEnabled="true"
         android:textColor="#ff000000"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/image_camera"
-        android:layout_toEndOf="@+id/image_camera" />
+        android:layout_below="@+id/Altitude"
+        android:layout_toRightOf="@+id/text_Description" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -45,8 +46,7 @@
         android:nestedScrollingEnabled="true"
         android:textColor="#ff000000"
         android:layout_below="@+id/Longitude"
-        android:layout_alignLeft="@+id/Longitude"
-        android:layout_alignStart="@+id/Longitude" />
+        android:layout_toRightOf="@+id/text_Description" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -56,17 +56,17 @@
         android:textStyle="bold"
         android:nestedScrollingEnabled="true"
         android:textColor="#ff000000"
-        android:layout_above="@+id/Longitude"
-        android:layout_toRightOf="@+id/image_camera"
-        android:layout_toEndOf="@+id/image_camera" />
+        android:layout_below="@+id/saveButton"
+        android:layout_toRightOf="@+id/text_Description"
+        android:layout_toEndOf="@+id/text_Description" />
 
     <ImageView
         android:id="@+id/image_camera"
         android:contentDescription="@string/image_cd_camera"
-        android:rotation="0"
-        android:layout_width="250dp"
+        android:rotation="270"
+        android:layout_width="200dp"
         android:layout_height="250dp"
-        android:layout_alignBottom="@+id/Latitude"
+        android:layout_below="@+id/place_enter"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -75,27 +75,117 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton"
-        android:layout_alignTop="@+id/image_camera"
-        android:layout_alignLeft="@+id/imageButton2"
-        android:layout_alignStart="@+id/imageButton2" />
+        android:layout_below="@+id/place_enter"
+        android:layout_alignRight="@+id/Altitude"
+        android:layout_alignEnd="@+id/Altitude" />
 
     <ImageButton
         android:src="@drawable/ic_menu_mapmode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton2"
+        android:id="@+id/pick_place_button"
         android:layout_below="@+id/imageButton"
-        android:layout_alignLeft="@+id/imageButton3"
-        android:layout_alignStart="@+id/imageButton3" />
+        android:layout_alignRight="@+id/Altitude" />
 
     <ImageButton
         android:src="@drawable/ic_menu_compass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton3"
-        android:layout_below="@+id/imageButton2"
-        android:layout_alignRight="@+id/Longitude"
-        android:layout_alignEnd="@+id/Longitude" />
+        android:layout_below="@+id/pick_place_button"
+        android:layout_alignRight="@+id/Altitude" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Pick or Enter Place"
+        android:ems="10"
+        android:id="@+id/place_enter"
+        android:layout_alignTop="@+id/Place"
+        android:layout_centerHorizontal="true"
+        android:singleLine="false"
+        android:phoneNumber="false"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:src="@drawable/ic_menu_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveButton"
+        android:layout_below="@+id/imageButton3"
+        android:layout_alignRight="@+id/Altitude" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/text_Description"
+        android:layout_below="@+id/Latitude"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:linksClickable="false"
+        android:text="Enter Place Description" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/history_Place1"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/text_Description"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:singleLine="false"
+         />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:id="@+id/history_Image1"
+        android:layout_below="@+id/history_Place1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/history_Place2"
+        android:layout_above="@+id/history_Image2"
+        android:layout_centerHorizontal="true"
+         />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:id="@+id/history_Image2"
+        android:layout_alignTop="@+id/history_Image1"
+        android:layout_alignLeft="@+id/history_Place2"
+        android:layout_alignStart="@+id/history_Place2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/history_Description1"
+        android:layout_below="@+id/history_Image1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/history_Image1"
+        android:layout_alignEnd="@+id/history_Image1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/history_Description2"
+        android:layout_below="@+id/history_Image2"
+        android:layout_alignLeft="@+id/history_Image2"
+        android:layout_alignStart="@+id/history_Image2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/history_Image2"
+        android:layout_alignEnd="@+id/history_Image2" />
 
 
 </RelativeLayout>

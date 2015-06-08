@@ -8,11 +8,22 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- End new permissions for camera app -->
 
+    <!-- permissions for the gps-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- end of permissions for gps -->
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC9mYX1xolKnrmZps30TtUcBMh7I7UywYk"/>
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
