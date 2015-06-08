@@ -29,7 +29,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Longitude"
+        android:text="Longitude:"
         android:id="@+id/Longitude"
         android:textStyle="bold"
         android:nestedScrollingEnabled="true"
@@ -40,7 +40,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Latitude"
+        android:text="Latitude:"
         android:id="@+id/Latitude"
         android:textStyle="bold"
         android:nestedScrollingEnabled="true"
@@ -51,7 +51,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Altitude"
+        android:text="Altitude:"
         android:id="@+id/Altitude"
         android:textStyle="bold"
         android:nestedScrollingEnabled="true"
@@ -91,7 +91,7 @@
         android:src="@drawable/ic_menu_compass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton3"
+        android:id="@+id/GPSbutton"
         android:layout_below="@+id/pick_place_button"
         android:layout_alignRight="@+id/Altitude" />
 
@@ -113,7 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/saveButton"
-        android:layout_below="@+id/imageButton3"
+        android:layout_below="@+id/GPSbutton"
         android:layout_alignRight="@+id/Altitude" />
 
     <EditText
@@ -186,6 +186,33 @@
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/history_Image2"
         android:layout_alignEnd="@+id/history_Image2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/Longitude_value"
+        android:layout_below="@+id/altitude_value"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/altitude_value"
+        android:layout_above="@+id/Longitude"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/Latitude_value"
+        android:layout_below="@+id/Longitude_value"
+        android:layout_alignLeft="@+id/Longitude_value"
+        android:layout_alignStart="@+id/Longitude_value" />
 
 
 </RelativeLayout>
