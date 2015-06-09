@@ -214,5 +214,45 @@
         android:layout_alignLeft="@+id/Longitude_value"
         android:layout_alignStart="@+id/Longitude_value" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Camera"
+        android:id="@+id/textView"
+        android:layout_below="@+id/place_enter"
+        android:layout_toRightOf="@+id/imageButton"
+        android:layout_toEndOf="@+id/imageButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Google Maps (crashes)"
+        android:id="@+id/textView2"
+        android:layout_above="@+id/GPSbutton"
+        android:layout_toRightOf="@+id/Latitude"
+        android:layout_toEndOf="@+id/Latitude" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Get Coordinates"
+        android:id="@+id/textView3"
+        android:layout_alignBottom="@+id/GPSbutton"
+        android:layout_toRightOf="@+id/Altitude"
+        android:layout_toEndOf="@+id/Altitude" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Add"
+        android:id="@+id/textView4"
+        android:layout_alignBottom="@+id/saveButton"
+        android:layout_toRightOf="@+id/history_Image2"
+        android:layout_toEndOf="@+id/history_Image2" />
+
 
 </RelativeLayout>

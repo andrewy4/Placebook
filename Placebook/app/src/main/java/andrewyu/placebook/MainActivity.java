@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         //told to call this in the the onCreate
-       // initGoogleApi();
+       initGoogleApi();
 
         //camera button
         ImageButton cameraButton = (ImageButton)findViewById(R.id.imageButton);
@@ -61,7 +61,7 @@ public class MainActivity extends Activity {
 
         //google places button
         ImageButton pickPlaceButton = (ImageButton)findViewById(R.id.pick_place_button);
-        /*pickPlaceButton.setOnClickListener(pickPlaceListener);*/
+        pickPlaceButton.setOnClickListener(pickPlaceListener);
 
         editPlace = (EditText)findViewById(R.id.place_enter);
         final EditText editDescription = (EditText)findViewById(R.id.text_Description);
@@ -79,8 +79,6 @@ public class MainActivity extends Activity {
 
         //Geographic Location
 
-
-
         //GPS XYZ
         gpsButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -90,7 +88,6 @@ public class MainActivity extends Activity {
                 lm.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,ll);
             }
         });
-
 
         //storing to history button
         saveButton.setOnClickListener(new View.OnClickListener() {
@@ -142,9 +139,6 @@ public class MainActivity extends Activity {
     }
 
 
-
-
-
     private View.OnClickListener cameraListener = new View.OnClickListener(){
         @Override
         public void onClick(View view) {
@@ -153,12 +147,12 @@ public class MainActivity extends Activity {
         }
     };
 
-   /* private View.OnClickListener pickPlaceListener = new View.OnClickListener(){
+   private View.OnClickListener pickPlaceListener = new View.OnClickListener(){
         @Override
         public void onClick(View view){
             launchPlacePicker();
         }
-    };*/
+    };
 
 
      private void takePhoto(View view){
